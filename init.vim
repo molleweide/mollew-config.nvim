@@ -55,11 +55,7 @@ set winwidth=100
 " Put contents of unnamed register in OS X clipboard
 set clipboard=unnamed
 
-" remap ESC to jk
-" inoremap jk <esc>
 
-"Clear current search highlight by hitting g + /
-nmap <silent> g/ :nohlsearch<CR>
 
 
 " ================ Turn Off Swap Files ==============
@@ -139,30 +135,7 @@ set colorcolumn=81
 set splitright
 set splitbelow
 
-" Create window splits easier. The default
-" way is Ctrl-w,v and Ctrl-w,s. I remap
-" this to vv and ss
-nnoremap <silent> vv <C-w>v
-nnoremap <silent> vs <C-w>s
-
-"make Y consistent with C and D
-nnoremap Y y$
-function! YRRunAfterMaps()
-  nnoremap Y   :<C-U>YRYankCount 'y$'<CR>
-endfunction
-
-" remap : to ; and vice versa
-nnoremap ; :
-" nnoremap : ;
-
-" background out of insert mode
-inoremap <C-Z> <Esc><C-Z>
-
-" Use sane regexes.
-nnoremap / /\v
-vnoremap / /\v
-
-" Load aliases for :vh -> :vertical h
+"" Load aliases for :vh -> :vertical h
 if exists('s:loaded_vimafter')
   silent doautocmd VimAfter VimEnter *
 else
@@ -172,24 +145,6 @@ else
     autocmd VimEnter * source ~/.config/nvim/aliases.vim
   augroup END
 endif
-
-" Remove arrow keys in Insert Mode
-inoremap <Down> <Nop>
-inoremap <Left> <Nop>
-inoremap <Right> <Nop>
-inoremap <Up> <Nop>
-
-" Remove arrow keys in Normal Mode
-nnoremap <Down> <Nop>
-nnoremap <Left> <Nop>
-nnoremap <Right> <Nop>
-nnoremap <Up> <Nop>
-
-" Remove arrow keys in Visual Mode
-vnoremap <Down> <Nop>
-vnoremap <Left> <Nop>
-vnoremap <Right> <Nop>
-vnoremap <Up> <Nop>
 
 " wildignore
 set wildignore+=node_modules/*,bower_components/*,vendor/bundle/*,tmp/*

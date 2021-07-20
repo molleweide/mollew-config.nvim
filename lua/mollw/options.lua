@@ -24,6 +24,8 @@ opt.noexrc=true
 opt.noex=true
 opt.nosecure=true
 
+-- minimum width
+o.winwidth=100
 
 -- ================ Indentation ======================
 

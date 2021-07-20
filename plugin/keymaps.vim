@@ -1,5 +1,35 @@
 scriptencoding utf-8
 
+"Clear current search highlight by hitting g + /
+nmap <silent> g/ :nohlsearch<CR>
+
+" Create window splits easier. The default
+" way is Ctrl-w,v and Ctrl-w,s. I remap
+" this to vv and ss
+nnoremap <silent> vv <C-w>v
+nnoremap <silent> vs <C-w>s
+
+"make Y consistent with C and D
+nnoremap Y y$
+function! YRRunAfterMaps()
+  nnoremap Y   :<C-U>YRYankCount 'y$'<CR>
+endfunction
+
+" remap : to ; and vice versa
+nnoremap ; :
+" nnoremap : ;
+
+" background out of insert mode
+inoremap <C-Z> <Esc><C-Z>
+
+" Use sane regexes.
+nnoremap / /\v
+vnoremap / /\v
+
+
+
+" /////////////////////
+
 " Replace ex mode with gq
 nnoremap Q gq
 nnoremap Qp vipgq<esc>

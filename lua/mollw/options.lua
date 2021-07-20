@@ -3,6 +3,69 @@
 -- Until then, you can check out `./lua/tj/globals/opt.lua
 local opt = vim.opt
 
+
+-- ================ general config ====================
+opt.backspace="indent,eol,start"  -- allow backspace in insert mode
+opt.history=1000                -- store lots of :cmdline history
+opt.gcr="a:blinkon0"              -- disable cursor blink
+opt.visualbell=true             -- no sounds
+opt.autoread=true               -- reload files changed outside vim
+opt.ruler=true                  -- show ruler
+opt.undolevels=1000             -- undo levels
+opt.laststatus=2                -- fix status bar
+opt.guifont="Inconsolata-g for Powerline"
+opt.number=true
+opt.foldmethod=indent
+
+opt.wildmenu = true
+
+-- stop kicking me into this mode you fucking apes
+opt.noexrc=true
+opt.noex=true
+opt.nosecure=true
+
+
+-- ================ Indentation ======================
+
+opt.autoindent=true
+opt.smartindent=true
+opt.smarttab=true
+opt.shiftwidth=2
+opt.softtabstop=2
+opt.tabstop=2
+opt.expandtab=true
+
+-- ================ Scrolling ========================
+
+o.scrolloff=4         -- Start scrolling when we're 4 lines away from margins
+o.sidescrolloff=15
+o.sidescroll=1
+
+-- =============== mouse =====================
+
+o.mouse=n
+
+-- ================ Editing ==========================
+
+-- color column
+o.colorcolumn=81
+
+-- Open splits to the right or below; more natural than the default
+o.splitright=true
+o.splitbelow=true
+
+-- wildignore
+-- set wildignore+=node_modules/*,bower_components/*,vendor/bundle/*,tmp/*
+opt('wildignore', 'node_modules/*,bower_components/*,vendor/bundle/*,tmp/*')
+
+--
+
+o.nowrap=true       -- Don't wrap lines
+o.linebreak=true    -- Wrap lines at convenient points
+
+-- tj below..
+
+
 -- Ignore compiled files
 opt.wildignore = "__pycache__"
 opt.wildignore = opt.wildignore + { "*.o", "*~", "*.pyc", "*pycache*" }
@@ -49,8 +112,8 @@ opt.breakindent = true
 opt.showbreak = string.rep(" ", 3) -- Make it so that long lines wrap smartly
 opt.linebreak = true
 
-opt.foldmethod = "marker"
-opt.foldlevel = 0
+opt.foldmethod = "indent"
+-- opt.foldlevel = 0
 opt.modelines = 1
 
 opt.belloff = "all" -- Just turn the dang bell off

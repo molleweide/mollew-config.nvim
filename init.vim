@@ -1,5 +1,7 @@
 " use vim settings, rather then vi settings (much better!).
 " this must be first, because it changes other options as a side effect.
+"
+"
 set nocompatible
 
 " =============== character fixes ====================
@@ -9,6 +11,8 @@ set encoding=utf-8
 
 " ================ general config ====================
 
+set path+=**
+set wildmenu
 " set shell=zsh
 set backspace=indent,eol,start  "allow backspace in insert mode
 set history=1000                "store lots of :cmdline history
@@ -24,6 +28,9 @@ set guifont=Inconsolata-g\ for\ Powerline
 set number
 set relativenumber
 set foldmethod=indent
+set noruler
+set cursorline " highlight cursor line and column
+set cursorcolumn
 
 " this makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
@@ -136,7 +143,7 @@ set splitbelow
 " way is Ctrl-w,v and Ctrl-w,s. I remap
 " this to vv and ss
 nnoremap <silent> vv <C-w>v
-nnoremap <silent> ds <C-w>s
+nnoremap <silent> vs <C-w>s
 
 "make Y consistent with C and D
 nnoremap Y y$

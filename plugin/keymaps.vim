@@ -1,12 +1,4 @@
-" molleweide personal bindings
-
-" ============ unused ============
-"     ;
-
-" ============ xxx  ============
-
-set path+=**
-set wildmenu
+scriptencoding utf-8
 
 " Replace ex mode with gq
 nnoremap Q gq
@@ -19,7 +11,7 @@ noremap <leader>RA :%s//g<Left><Left>
 " works well w/qwerty and colemak
 inoremap zm <esc>
 
-"(v)im (r)eload
+""(v)im (r)eload
 " nmap <silent> ,vr :so %<CR>
 nmap <silent> <leader>vr :source $MYVIMRC<CR>
 
@@ -48,9 +40,7 @@ nnoremap <silent> <Leader>6 <C-^>
 " nnoremap <silent> <Leader>8 <C-*>
 " nnoremap <silent> <Leader>9 <C-(>
 " nnoremap <silent> <Leader>0 <C-)>
-
-
-
+"
 " ================ Aliases ==========================
 
 nnoremap <silent> <Leader>kS :e ~/.dotfiles/surfingkeys/config.js<CR>
@@ -62,6 +52,7 @@ nnoremap <silent> <Leader>knf :e ~/notes/tfab.md<CR>
 nnoremap <silent> <Leader>knt :e ~/notes/TODO.md<CR>
 nnoremap <silent> <Leader>ks :e ~/.dotfiles/skhdrc<CR>
 nnoremap <silent> <Leader>kt :e ~/.dotfiles/tmux.conf<CR>
+nnoremap <silent> <Leader>kk :e ~/.dotfiles/nvim/plugin/keymaps.vim<CR>
 nnoremap <silent> <Leader>kv :e ~/.dotfiles/nvim/layers/molleweide/config.vim<CR>
 nnoremap <silent> <Leader>ky :e ~/.dotfiles/yabairc<CR>
 nnoremap <silent> <Leader>kza :e ~/.dotfiles/zsh/custom/aliases.zsh<CR>
@@ -71,7 +62,6 @@ nnoremap <silent> <Leader>kzz :e ~/.dotfiles/zshrc<CR>
 " =============== aliases: keys  ====================
 
 nnoremap <silent> <Leader>kM :view ~/code/kmonad/keymap/tutorial.kbd<CR>
-nnoremap <silent> <Leader>kk :e ~/.dotfiles/tmuxinator/keys.yml<CR>
 nnoremap <silent> <Leader>km :e ~/code/kmonad/keymap/user/molleweide/mbp.kbd<CR>
 nnoremap <silent> <Leader>kqb :e ~/code/qmk_firmware/keyboards/ergodox_ez/keymaps/myergo/layers/base.h<CR>
 
@@ -93,6 +83,8 @@ set imsearch=0
 
 " re-indent file
 map <leader>,i mzgg=G`z<CR>
+
+
 
 " =============== Buffer nav ===============
 nnoremap <Tab> :bnext<CR>
@@ -168,9 +160,6 @@ nnoremap <leader>H "zyiW:h <C-r>z<CR>
 " " let g:user_emmet_expandabbr_key = '<C-e>,'
 " let g:user_emmet_expandabbr_key = '<C-e>,'
 
-set noruler
-set cursorline " highlight cursor line and column
-set cursorcolumn
 
 " ======== cyclist | listchars ========
 nmap <leader>cn <g>CyclistNext

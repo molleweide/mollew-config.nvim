@@ -18,7 +18,6 @@ local noresilent = { silent=true, noremap=true}
 -- ============ xxx  ============
 
 set path+=**
-set wildmenu
 
 -- Replace ex mode with gq
 nnoremap Q gq

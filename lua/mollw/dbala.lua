@@ -14,33 +14,6 @@ local noresilent = { silent=true, noremap=true}
 -- this must be first, because it changes other options as a side effect.
 vim.cmd 'set nocompatible'
 
--- =============== character fixes ====================
-
-vim.cmd 'scriptencoding utf-8'
-o.encoding="utf-8"
-
--- ================ general config ====================
-
-o.shell="zsh"
-o.backspace="indent,eol,start"  -- allow backspace in insert mode
-o.history=1000                -- store lots of :cmdline history
-o.showcmd=true                -- show incomplete cmds down the bottom
-o.showmode=true               -- show current mode down the bottom
-o.gcr="a:blinkon0"              -- disable cursor blink
-o.visualbell=true             -- no sounds
-o.autoread=true               -- reload files changed outside vim
-o.ruler=true                  -- show ruler
-o.undolevels=1000             -- undo levels
-o.laststatus=2                -- fix status bar
-o.guifont="Inconsolata-g for Powerline"
-o.number=true
-o.relativenumber=true
-o.foldmethod=indent
-
--- this makes vim act like all other editors, buffers can
--- exist in the background without being in a window.
--- http://items.sjbach.com/319/configuring-vim-right
-o.hidden=true
 
 -- turn on syntax highlighting
 opt('syntax', 'on')
@@ -48,21 +21,6 @@ opt('syntax', 'on')
 -- highlight funky characters and whatnot
 opt('list',true)
 opt('listchars','tab:▸\\ ,trail:ـ,extends:➧,eol:¬')
-
--- stop kicking me into this mode you fucking apes
-o.noexrc=true
-o.noex=true
-o.nosecure=true
-
--- minimum width
-o.winwidth=100
-
--- Put contents of unnamed register in OS X clipboard
-o.clipboard="unnamed"
-
--- remap ESC to jk
--- inoremap jk <esc>
-
 
 -- Clear current search highlight by hitting g + /
 map('n', 'g/', '<cmd>nohlsearch<cr>', silent)
@@ -89,16 +47,6 @@ vim.cmd([[
 --   set undofile
 -- endif
 
--- ================ Indentation ======================
-
-o.autoindent=true
-o.smartindent=true
-o.smarttab=true
-o.shiftwidth=2
-o.softtabstop=2
-o.tabstop=2
-o.expandtab=true
-
 -- ??? are these necessary??
 cmd([[
   filetype plugin on
@@ -111,19 +59,9 @@ cmd([[
   set list listchars=tab:\ \ ,trail:·
 ]])
 
-o.nowrap=true       -- Don't wrap lines
-o.linebreak=true    -- Wrap lines at convenient points
-
--- ================ Scrolling ========================
-
-o.scrolloff=4         -- Start scrolling when we're 4 lines away from margins
-o.sidescrolloff=15
-o.sidescroll=1
 
 g.mapleader = [[,]]
 
--- =============== mouse =====================
-o.mouse=n
 
 -- =============== python ====================
 
@@ -150,20 +88,12 @@ cmd([[
   augroup END
 ]])
 
--- ================ Editing ==========================
-
--- color column
-o.colorcolumn=81
-
--- Open splits to the right or below; more natural than the default
-o.splitright=true
-o.splitbelow=true
 
 -- Create window splits easier. The default
 -- way is Ctrl-w,v and Ctrl-w,s. I remap
 -- this to vv and ss
 map('n', 'vv', '<C-w>v', {silent=true,noremap=true})
-map('n', 'ds', '<C-w>s', {silent=true,noremap=true})
+map('n', 'vs', '<C-w>s', {silent=true,noremap=true})
 
 -- make Y consistent with C and D
 map('n', 'Y', 'y$', {noremap=true})
@@ -215,9 +145,6 @@ map('v', '<Left>',  '<Nop>')
 map('v', '<Right>', '<Nop>')
 map('v', '<Up>',    '<Nop>')
 
--- wildignore
--- set wildignore+=node_modules/*,bower_components/*,vendor/bundle/*,tmp/*
-opt('wildignore', 'node_modules/*,bower_components/*,vendor/bundle/*,tmp/*')
 
 
 -- function to source a file if it exists

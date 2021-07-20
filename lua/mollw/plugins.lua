@@ -13,68 +13,65 @@ return require("packer").startup {
   function(use)
     use "wbthomason/packer.nvim"
 
-
-    --[[
-
 -- Core
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'Konfekt/vim-alias'
-Plug 'nanotee/nvim-lua-guide'         -- additional help under :h nvim-lua-guide
-Plug 'liuchengxu/vim-which-key'       -- context menu when hitting leader key(s)
+use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+use 'Konfekt/vim-alias'
+use 'nanotee/nvim-lua-guide'         -- additional help under :h nvim-lua-guide
+use 'liuchengxu/vim-which-key'       -- context menu when hitting leader key(s)
 -- https://github.com/folke/which-key.nvim
-Plug 'kevinhwang91/nvim-bqf'          -- better quickfix
+use 'kevinhwang91/nvim-bqf'          -- better quickfix
 
 -- Editing
-Plug 'rhysd/clever-f.vim'             -- hit `f` to repeat search
-Plug 'romgrk/nvim-treesitter-context' -- show function context as you scroll
-Plug 'AndrewRadev/splitjoin.vim'      -- split/join single line/multiline
-Plug 'AndrewRadev/switch.vim'         -- switch syntaxes around with `gs`
-Plug 'tpope/vim-commentary'           -- comment with `gcc`
-Plug 'romainl/vim-cool'               -- disable highlights automatically on cursor move
-Plug 'easymotion/vim-easymotion'      -- ,,w and ,,b to jump to objects
-Plug 'justinmk/vim-sneak'             --       should be even faster than easymotion
-Plug 'tpope/vim-projectionist'        -- alternate files with :AV/:AS
-Plug 'kshenoy/vim-signature'          -- show marks in the gutter
-Plug 'itspriddle/vim-stripper'        -- strip whitespace on save
-Plug 'tpope/vim-surround'             -- cs`' to change `` to '', etc
-Plug 'milkypostman/vim-togglelist'    -- <leader>q to toggle quickfix
-Plug 'tjdevries/cyclist.vim'          -- <leader>q to toggle quickfix
-Plug 'mbbill/undotree'                -- visualize undo tree
+use 'rhysd/clever-f.vim'             -- hit `f` to repeat search
+use 'romgrk/nvim-treesitter-context' -- show function context as you scroll
+use 'AndrewRadev/splitjoin.vim'      -- split/join single line/multiline
+use 'AndrewRadev/switch.vim'         -- switch syntaxes around with `gs`
+use 'tpope/vim-commentary'           -- comment with `gcc`
+use 'romainl/vim-cool'               -- disable highlights automatically on cursor move
+use 'easymotion/vim-easymotion'      -- ,,w and ,,b to jump to objects
+use 'justinmk/vim-sneak'             --       should be even faster than easymotion
+use 'tpope/vim-projectionist'        -- alternate files with :AV/:AS
+use 'kshenoy/vim-signature'          -- show marks in the gutter
+use 'itspriddle/vim-stripper'        -- strip whitespace on save
+use 'tpope/vim-surround'             -- cs`' to change `` to '', etc
+use 'milkypostman/vim-togglelist'    -- <leader>q to toggle quickfix
+use 'tjdevries/cyclist.vim'          -- <leader>q to toggle quickfix
+use 'mbbill/undotree'                -- visualize undo tree
 
 -- Files
-Plug 'danro/rename.vim'
-Plug 'Shougo/vimfiler.vim'
-Plug 'Shougo/unite.vim'
-Plug 'rbgrouleff/bclose.vim'        -- Ranger dependency
-Plug 'francoiscabrol/ranger.vim'
--- Plug 'justinmk/vim-dirvish'
--- Plug 'justinmk/vim-gtfo'
+use 'danro/rename.vim'
+use 'Shougo/vimfiler.vim'
+use 'Shougo/unite.vim'
+use 'rbgrouleff/bclose.vim'        -- Ranger dependency
+use 'francoiscabrol/ranger.vim'
+-- use 'justinmk/vim-dirvish'
+-- use 'justinmk/vim-gtfo'
 
 -- LSP
-Plug 'neovim/nvim-lspconfig'             -- out of the box LSP configs for common langs
-Plug 'glepnir/lspsaga.nvim'              -- code action plugin
-Plug 'nvim-lua/lsp-status.nvim'          -- provides statusline information for LSP
-Plug 'hrsh7th/nvim-compe'                -- completion engine
-Plug 'onsails/lspkind-nvim'              -- add vscode-style icons to completion menu
-Plug 'nathunsmitty/nvim-ale-diagnostic'  -- route lsp diagnostics to ALE
+use 'neovim/nvim-lspconfig'             -- out of the box LSP configs for common langs
+use 'glepnir/lspsaga.nvim'              -- code action plugin
+use 'nvim-lua/lsp-status.nvim'          -- provides statusline information for LSP
+use 'hrsh7th/nvim-compe'                -- completion engine
+use 'onsails/lspkind-nvim'              -- add vscode-style icons to completion menu
+use 'nathunsmitty/nvim-ale-diagnostic'  -- route lsp diagnostics to ALE
 
 -- Lua
-Plug 'nvim-lua/plenary.nvim'            -- only for nvim internal use
+use 'nvim-lua/plenary.nvim'            -- only for nvim internal use
 
 -- Json
-Plug 'elzr/vim-json'
+use 'elzr/vim-json'
 
 -- Markdown
 -- Plug 'plasticboy/vim-markdown'                -- fucks up syntax hl...
-Plug 'npxbr/glow.nvim', {'do': ':GlowInstall'}  -- markdown preview with :Glow
+use { 'npxbr/glow.nvim', run = ':GlowInstall' }  -- markdown preview with :Glow
 
 -- Ruby
-Plug 'keith/rspec.vim'                    -- better RSpec syntax highlighting
-Plug 'jgdavey/vim-blockle'                -- toggle block styles with ,b
-Plug 'tpope/vim-rake'                     -- allow for alternate files
-Plug 'vim-ruby/vim-ruby'                  -- indentation, etc
-Plug 'joker1007/vim-ruby-heredoc-syntax'  -- fenced syntax colors in heredocs
-Plug 'ecomba/vim-ruby-refactoring'        -- extract vars, methods, etc
+use 'keith/rspec.vim'                    -- better RSpec syntax highlighting
+use 'jgdavey/vim-blockle'                -- toggle block styles with ,b
+use 'tpope/vim-rake'                     -- allow for alternate files
+use 'vim-ruby/vim-ruby'                  -- indentation, etc
+use 'joker1007/vim-ruby-heredoc-syntax'  -- fenced syntax colors in heredocs
+use 'ecomba/vim-ruby-refactoring'        -- extract vars, methods, etc
 
 -- Haskell
 -- https://github.com/neovimhaskell/nvim-hs
@@ -83,84 +80,84 @@ Plug 'ecomba/vim-ruby-refactoring'        -- extract vars, methods, etc
 -- https://github.com/alx741/yesod.vim
 
 -- Lisp
-Plug 'vlime/vlime', {'rtp': 'vim/'}       -- sbcl --load <your bundle dir>/vlime/lisp/start-vlime.lisp
-Plug 'lisp-mirror/quicklisp.nvim'
-Plug 'tami5/lispdocs.nvim'
+-- use { 'vlime/vlime, rtp = 'vim/'}       -- sbcl --load <your bundle dir>/vlime/lisp/start-vlime.lisp
+-- use 'lisp-mirror/quicklisp.nvim'
+-- use 'tami5/lispdocs.nvim'
 
 -- Pandoc | these two mess up the syntax highlighting...
 -- Plug 'vim-pandoc/vim-pandoc'
 -- Plug 'vim-pandoc/vim-pandoc-syntax'
 
 -- Snippets
-Plug 'norcalli/snippets.nvim'
-Plug 'SirVer/UltiSnips'
-Plug 'hrsh7th/vim-vsnip'
-Plug 'hrsh7th/vim-vsnip-integ'
+use 'norcalli/snippets.nvim'
+use 'SirVer/UltiSnips'
+use 'hrsh7th/vim-vsnip'
+use 'hrsh7th/vim-vsnip-integ'
 
-Plug 'honza/vim-snippets'
-Plug 'craigmac/vim-vsnip-snippets'
+use 'honza/vim-snippets'
+use 'craigmac/vim-vsnip-snippets'
 
 -- Syntax checking
-Plug 'w0rp/ale'
+use 'w0rp/ale'
 
 -- Tests
-Plug 'janko-m/vim-test'
+use 'janko-m/vim-test'
 
 -- Theming
-Plug 'chrisbra/Colorizer'            -- show hex colors in CSS/HTML files
-Plug 'glepnir/galaxyline.nvim'       -- fast Lua statusline
-Plug 'kyazdani42/nvim-web-devicons'  -- fancy icons
-Plug 'RRethy/vim-illuminate'         -- highlight duplicate words
-Plug 'drzel/vim-line-no-indicator'   -- nice scroll indicator
-Plug 'sheerun/vim-polyglot'
+use 'chrisbra/Colorizer'            -- show hex colors in CSS/HTML files
+use 'glepnir/galaxyline.nvim'       -- fast Lua statusline
+use 'kyazdani42/nvim-web-devicons'  -- fancy icons
+use 'RRethy/vim-illuminate'         -- highlight duplicate words
+use 'drzel/vim-line-no-indicator'   -- nice scroll indicator
+use 'sheerun/vim-polyglot'
 
 -- Color Schemes
-Plug 'tjdevries/colorbuddy.vim'
-Plug 'bkegley/gloombuddy'
+use 'tjdevries/colorbuddy.vim'
+use 'bkegley/gloombuddy'
 
-Plug 'NieTiger/halcyon-neovim'
-Plug 'christianchiarulli/nvcode-color-schemes.vim'
-Plug 'mhartington/oceanic-next'
-Plug 'joshdick/onedark.vim'
-Plug 'haishanh/night-owl.vim'
-Plug 'bluz71/vim-nightfly-guicolors'
+use 'NieTiger/halcyon-neovim'
+use 'christianchiarulli/nvcode-color-schemes.vim'
+use 'mhartington/oceanic-next'
+use 'joshdick/onedark.vim'
+use 'haishanh/night-owl.vim'
+use 'bluz71/vim-nightfly-guicolors'
 
 -- Tmux
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'melonmanchan/vim-tmux-resizer'
-Plug 'benmills/vimux'
+use 'christoomey/vim-tmux-navigator'
+use 'melonmanchan/vim-tmux-resizer'
+use 'benmills/vimux'
 
 -- Grep + load
-Plug 'mileszs/ack.vim'
-Plug 'junegunn/fzf'
-Plug 'junegunn/fzf.vim'
+use 'mileszs/ack.vim'
+use 'junegunn/fzf'
+use 'junegunn/fzf.vim'
 
 -- Version control
-Plug 'rhysd/git-messenger.vim'  -- show commit popup with <leader>gm
-Plug 'tpope/vim-fugitive'       -- the git plugin
-Plug 'airblade/vim-gitgutter'   -- show changed line marks in gutter
-Plug 'tpope/vim-rhubarb'        -- enable GHE/Github links with :Gbrowse
+use 'rhysd/git-messenger.vim'  -- show commit popup with <leader>gm
+use 'tpope/vim-fugitive'       -- the git plugin
+use 'airblade/vim-gitgutter'   -- show changed line marks in gutter
+use 'tpope/vim-rhubarb'        -- enable GHE/Github links with :Gbrowse
 
 -- Vimscript
-Plug 'tpope/vim-scriptease'
+use 'tpope/vim-scriptease'
 
 -- Tabular data
-Plug 'godlygeek/tabular'
-Plug 'vim-scripts/excel.vim'
-Plug 'kjnh10/ExcelLikeVim'
+use 'godlygeek/tabular'
+use 'vim-scripts/excel.vim'
+use 'kjnh10/ExcelLikeVim'
 
 -- Misc
-Plug 'mhinz/vim-startify'             -- custom startup display
-Plug 'davidgranstrom/scnvim', { 'do': {-> scnvim#install() } } -- supercollider front end
-Plug 'tjdevries/train.nvim'           -- vim motion practice game
-Plug 'rajasegar/vim-search-web'
-Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
-Plug 'KabbAmine/vCoolor.vim'
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
-Plug 'jez/vim-superman'
-Plug 'vimwiki/vimwiki'
-Plug 'folke/todo-comments.nvim'       -- looks really nice
+use 'mhinz/vim-startify'             -- custom startup display
+use { 'davidgranstrom/scnvim', run = function() vim.fn['scnvim#install']() end }
+use 'tjdevries/train.nvim'           -- vim motion practice game
+use 'rajasegar/vim-search-web'
+use { 'glacambre/firenvim', run = function() vim.fn['firenvim#install'](0) end }
+use 'KabbAmine/vCoolor.vim'
+use 'junegunn/goyo.vim'
+use 'junegunn/limelight.vim'
+use 'jez/vim-superman'
+use 'vimwiki/vimwiki'
+use 'folke/todo-comments.nvim'       -- looks really nice
 
 -- Bin
 -- https://github.com/akinsho/nvim-toggleterm.lua
@@ -174,13 +171,6 @@ Plug 'folke/todo-comments.nvim'       -- looks really nice
 -- https://github.com/datwaft/bubbly.nvim
 -- https://github.com/jiangmiao/auto-pairs
 -- https://github.com/vhyrro/neorg
-
-
-  --]]
-
-
-
-
 
     --local local_use = function(first, second)
     --  local plug_path, home
@@ -471,17 +461,17 @@ Plug 'folke/todo-comments.nvim'       -- looks really nice
     --end
     ---- }}}
 
-    ---- TREE SITTER: {{{
-    --local_use("nvim-treesitter", "nvim-treesitter")
-    --use "nvim-treesitter/nvim-treesitter-textobjects"
-    --use "nvim-treesitter/playground"
-    --use "vigoux/architext.nvim"
+    -- -- TREE SITTER: {{{
+    -- use "nvim-treesitter/nvim-treesitter"
+    -- use "nvim-treesitter/nvim-treesitter-textobjects"
+    -- use "nvim-treesitter/playground"
+    -- use "vigoux/architext.nvim"
 
-    --use "JoosepAlviste/nvim-ts-context-commentstring"
+    -- use "JoosepAlviste/nvim-ts-context-commentstring"
 
-    ---- Grammars
-    --local_use "tree-sitter-lua"
-    --local_use "tree-sitter-sql"
+    -- -- Grammars
+    -- local_use "tree-sitter-lua"
+    -- local_use "tree-sitter-sql"
 
     ---- }}}
     ---- NAVIGATION: {{{

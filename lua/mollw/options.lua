@@ -5,6 +5,9 @@ local opt = vim.opt
 
 
 -- ================ general config ====================
+
+opt.path = opt.path + { "**" }
+
 opt.backspace="indent,eol,start"  -- allow backspace in insert mode
 opt.history=1000                -- store lots of :cmdline history
 opt.gcr="a:blinkon0"              -- disable cursor blink
@@ -14,8 +17,6 @@ opt.ruler=true                  -- show ruler
 opt.undolevels=1000             -- undo levels
 opt.laststatus=2                -- fix status bar
 opt.guifont="Inconsolata-g for Powerline"
-opt.number=true
-opt.foldmethod=indent
 
 opt.wildmenu = true
 
@@ -26,6 +27,14 @@ opt.nosecure=true
 
 -- minimum width
 o.winwidth=100
+
+opt.noswapfile=true
+opt.nobackup=true
+opt.nowb=true
+
+opt.nowrap=true
+opt.linebreak=true
+
 
 -- ================ Indentation ======================
 
@@ -39,22 +48,21 @@ opt.expandtab=true
 
 -- ================ Scrolling ========================
 
-o.scrolloff=4         -- Start scrolling when we're 4 lines away from margins
-o.sidescrolloff=15
-o.sidescroll=1
+opt.scrolloff=4         -- Start scrolling when we're 4 lines away from margins
+opt.sidescrolloff=15
+opt.sidescroll=1
 
 -- =============== mouse =====================
 
-o.mouse=n
+opt.mouse= "n"
 
 -- ================ Editing ==========================
 
 -- color column
-o.colorcolumn=81
+opt.colorcolumn=81
 
--- Open splits to the right or below; more natural than the default
-o.splitright=true
-o.splitbelow=true
+opt.splitright=true
+opt.splitbelow=true
 
 -- wildignore
 -- set wildignore+=node_modules/*,bower_components/*,vendor/bundle/*,tmp/*

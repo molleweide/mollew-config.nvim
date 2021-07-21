@@ -44,8 +44,6 @@ vim.g.mapleader = ","
 --  See `./lua/tj/globals/*.lua` for more information.
 require "mollw.globals"
 
-require "mollw.statusline"
-
 -- Load packer.nvim files
 require "mollw.plugins"
 
@@ -54,6 +52,8 @@ vim.cmd [[ runtime plugin/astronauta.vim]]
 
 -- Load neovim options
 require "mollw.options"
+
+require "mollw.statusline"
 
 -- Neovim builtin LSP configuration
 require "mollw.lspservers"

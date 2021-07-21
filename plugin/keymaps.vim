@@ -98,11 +98,10 @@ nnoremap <silent> <Leader>knf :e ~/notes/tfab.md<CR>
 nnoremap <silent> <Leader>knt :e ~/notes/TODO.md<CR>
 nnoremap <silent> <Leader>ks :e ~/.dotfiles/skhdrc<CR>
 nnoremap <silent> <Leader>kt :e ~/.dotfiles/tmux.conf<CR>
-nnoremap <silent> <Leader>kvi :e ~/.dotfiles/nvim/init.lua<CR>
-
-nnoremap <silent> <Leader>kvk :e ~/.dotfiles/nvim/plugin/keymaps.vim<CR>
-nnoremap <silent> <Leader>kvo :e ~/.dotfiles/nvim/lua/mollw/options.lua<CR>
-nnoremap <silent> <Leader>kvp :e ~/.dotfiles/nvim/lua/mollw/plugins.lua<CR>
+nnoremap <silent> <Leader>kvi :e ~/.dotfiles/nvim.config/molleweide/init.lua<CR>
+nnoremap <silent> <Leader>kvk :e ~/.dotfiles/nvim.config/molleweide/plugin/keymaps.vim<CR>
+nnoremap <silent> <Leader>kvo :e ~/.dotfiles/nvim.config/molleweide/lua/mollw/options.lua<CR>
+nnoremap <silent> <Leader>kvp :e ~/.dotfiles/nvim.config/molleweide/lua/mollw/plugins.lua<CR>
 
 nnoremap <silent> <Leader>ky :e ~/.dotfiles/yabairc<CR>
 nnoremap <silent> <Leader>kza :e ~/.dotfiles/zsh/custom/aliases.zsh<CR>

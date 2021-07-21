@@ -10,7 +10,7 @@ vim.cmd [[
     syntax on
     filetype on
     filetype plugin indent on
-    PackerLoad nvim-treesitter
+    " PackerLoad nvim-treesitter
 ]]
 
 

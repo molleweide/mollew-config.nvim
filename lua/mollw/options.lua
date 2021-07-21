@@ -4,6 +4,16 @@
 local opt = vim.opt
 
 
+vim.cmd [[
+    rshada!
+    doautocmd BufRead
+    syntax on
+    filetype on
+    filetype plugin indent on
+    PackerLoad nvim-treesitter
+]]
+
+
 -- ================ general config ====================
 
 opt.path = opt.path + { "**" }

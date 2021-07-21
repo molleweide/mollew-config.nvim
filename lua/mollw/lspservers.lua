@@ -61,6 +61,7 @@ compe.setup({
     buffer = true,
     calc = false,
     vsnip = true,
+    neorg = true,
     nvim_lsp = true,
     nvim_lua = true,
     spell = true,

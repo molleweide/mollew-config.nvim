@@ -14,6 +14,9 @@ return require("packer").startup {
     use "wbthomason/packer.nvim"
     use "tjdevries/astronauta.nvim"
 
+    use { "vhyrro/neorg", ft = "norg", requires = "nvim-lua/plenary.nvim" }
+
+
 -- Core
 use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 use 'Konfekt/vim-alias'

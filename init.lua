@@ -27,6 +27,24 @@ Much of the configuration of individual plugins you can find in either:
 
 --]]
 
+
+-- reset
+vim.cmd [[
+	syntax off
+	filetype off
+	filetype plugin indent off
+]]
+
+-- vim.opt.shadafile = "NONE"
+-- vim.g.loaded_gzip = false
+-- vim.g.loaded_matchit = false
+-- vim.g.loaded_netrwPlugin = false
+-- vim.g.loaded_tarPlugin = false
+-- vim.g.loaded_zipPlugin = false
+-- vim.g.loaded_man = false
+-- vim.g.loaded_2html_plugin = false
+-- vim.g.loaded_remote_plugins = false
+
 -- TODO: Consider what to do with ginit.vim
 
 if require "mollw.first_load"() then
@@ -50,6 +68,7 @@ require "mollw.plugins"
 -- Force loading of astronauta first.
 vim.cmd [[ runtime plugin/astronauta.vim]]
 
+
 -- Load neovim options
 require "mollw.options"
 
@@ -57,12 +76,6 @@ require "mollw.statusline"
 
 -- Neovim builtin LSP configuration
 require "mollw.lspservers"
-require('nvim-treesitter.configs').setup {
-  ensure_installed = "maintained",
-  highlight = { enable = true },
-  incremental_selection = { enable = true },
-  textobjects = { enable = true },
-}
 --[[
 require "tj.lsp"
 

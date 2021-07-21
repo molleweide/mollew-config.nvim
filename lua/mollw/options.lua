@@ -21,19 +21,19 @@ opt.guifont="Inconsolata-g for Powerline"
 opt.wildmenu = true
 
 -- stop kicking me into this mode you fucking apes
-opt.noexrc=true
-opt.noex=true
-opt.nosecure=true
+-- opt.noexrc=true
+-- opt.noex=true
+-- opt.nosecure=true
 
 -- minimum width
-o.winwidth=100
+opt.winwidth=100
 
-opt.noswapfile=true
-opt.nobackup=true
-opt.nowb=true
+-- opt.noswapfile=true
+-- opt.nobackup=true
+-- opt.nowb=true
 
-opt.nowrap=true
-opt.linebreak=true
+-- opt.nowrap=true
+-- opt.linebreak=true
 
 
 -- ================ Indentation ======================
@@ -59,19 +59,15 @@ opt.mouse= "n"
 -- ================ Editing ==========================
 
 -- color column
-opt.colorcolumn=81
+-- opt.colorcolumn=81
 
 opt.splitright=true
 opt.splitbelow=true
 
--- wildignore
--- set wildignore+=node_modules/*,bower_components/*,vendor/bundle/*,tmp/*
-opt('wildignore', 'node_modules/*,bower_components/*,vendor/bundle/*,tmp/*')
-
 --
 
-o.nowrap=true       -- Don't wrap lines
-o.linebreak=true    -- Wrap lines at convenient points
+-- opt.nowrap=true       -- Don't wrap lines
+-- opt.linebreak=true    -- Wrap lines at convenient points
 
 -- tj below..
 
@@ -79,6 +75,8 @@ o.linebreak=true    -- Wrap lines at convenient points
 -- Ignore compiled files
 opt.wildignore = "__pycache__"
 opt.wildignore = opt.wildignore + { "*.o", "*~", "*.pyc", "*pycache*" }
+opt.wildignore = opt.wildignore + { "node_modules/*", "bower_components/*", "vendor/bundle/*", "tmp/*" }
+
 
 opt.wildmode = { "longest", "list", "full" }
 

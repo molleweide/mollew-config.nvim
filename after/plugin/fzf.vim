@@ -45,7 +45,10 @@ function! g:FzfFilesSource()
   endif
 endfunction
 
-let g:fzf_preview_cmd = g:plug_home . "/fzf.vim/bin/preview.sh {}"
+" vim-plug or packer.nvim...
+" let g:fzf_preview_cmd = g:plug_home . "/fzf.vim/bin/preview.sh {}"
+let g:fzf_preview_cmd =  stdpath('data') . "/site/pack/packer/start/"
+
 
 noremap <C-b> :Buffers<CR>
 nnoremap <silent> <Leader>f :Rg<CR>

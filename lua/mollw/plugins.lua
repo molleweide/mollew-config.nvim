@@ -12,6 +12,7 @@ end)()
 return require("packer").startup {
   function(use)
     use "wbthomason/packer.nvim"
+    use "tjdevries/astronauta.nvim"
 
 -- Core
 use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
@@ -201,7 +202,6 @@ use 'folke/todo-comments.nvim'       -- looks really nice
     --local_use "overlength.vim"
     --local_use "pastery.vim"
     --local_use "complextras.nvim"
-    --local_use "astronauta.nvim"
 
     ---- When I have some extra time...
     --local_use "train.vim"

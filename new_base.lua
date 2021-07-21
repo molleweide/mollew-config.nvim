@@ -14,7 +14,7 @@ Much of the configuration of individual plugins you can find in either:
   They get auto sourced on startup. In general, the name of the file configures
   the plugin with the corresponding name.
 
-./lua/tj/*.lua
+./lua/mollw/*.lua
   This is where configuration/extensions for new style plugins live.
 
   They don't get sourced automatically, but do get sourced by doing something like:
@@ -40,17 +40,14 @@ end
 -- leader.
 vim.g.mapleader = ","
 
-require "mollw.dbala"
-require "mollw.personal"
-
-
 -- Setup globals that I expect to be always available.
 --  See `./lua/tj/globals/*.lua` for more information.
 require "mollw.globals"
 
+require "mollw.statusline"
+
 -- Load packer.nvim files
 require "mollw.plugins"
-
 
 -- Force loading of astronauta first.
 vim.cmd [[ runtime plugin/astronauta.vim]]
@@ -58,8 +55,15 @@ vim.cmd [[ runtime plugin/astronauta.vim]]
 -- Load neovim options
 require "mollw.options"
 
---[[
 -- Neovim builtin LSP configuration
+require "mollw.lspservers"
+require('nvim-treesitter.configs').setup {
+  ensure_installed = "maintained",
+  highlight = { enable = true },
+  incremental_selection = { enable = true },
+  textobjects = { enable = true },
+}
+--[[
 require "tj.lsp"
 
 -- Telescope BTW

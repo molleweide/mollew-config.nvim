@@ -244,6 +244,9 @@ Plug 'folke/todo-comments.nvim'       " looks really nice
 
 call plug#end()
 
+call luaeval('require("mollw.lspservers")')
+
+
 lua <<LUA
 require('nvim-treesitter.configs').setup {
   ensure_installed = "maintained",
@@ -253,6 +256,6 @@ require('nvim-treesitter.configs').setup {
 }
 LUA
 
-call luaeval('require("statusline")')
+call luaeval('require("mollw.statusline")')
 
-call luaeval('require("which-key")')
+call luaeval('require("plugin.which-key")')
